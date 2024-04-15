@@ -1,5 +1,8 @@
+// Set default option values.
 const default_background_color = '#ffc7b3';
 const default_format_string = '%OP% (OP)';
+
+// Get and apply options to document.
 chrome.storage.sync.get(
     {
         "background_color": default_background_color,
