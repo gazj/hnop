@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HNOP Options</title>
+  </head>
+  <body style="width:200px;">
+    <center>
+      <img src="../images/icon-128.png" />
+      <br/>
+      <label>
+        <strong>Background Color</strong>
+        <br/>
+        Use <a href="https://htmlcolorcodes.com/">HTML Color Codes.</a>
+        <br/>
+        <input type="text" id="background-color" />
+      </label>
+      <br/><br/>
+      <label>
+        <strong>Username Format String</strong>
+        <br/>
+        Use %OP% to represent the author's username.
+        <br/>
+        HTML is supported.
+        <br/>
+        <textarea type="text" id="format-string"></textarea>
+      </label>
+      <br/>
+      <br/>
+      <button id="reset">Reset</button>
+      <button id="save">Save</button>
+      <br/>
+      <div id="status"></div>
+    </center>
+    <script src="../scripts/options.js"></script>
+  </body>
+</html>
