@@ -54,6 +54,17 @@ document.getElementById('reset').addEventListener('click', () => {
 // Set save options listener.
 document.getElementById('save').addEventListener('click', saveOptions);
 
+// Update the options icon based on the current URL.
+chrome.tabs.query({
+    active: true,
+    currentWindow: true
+}, (tabs) => {
+    if(!tabs.length) return;
+    let icon_path = tabs[0].url.indexOf("https://news.ycombinator.com/item?id=") >= 0
+        ? "../images/icon-128.png" : "../images/icon-128-inactive.png";
+    document.getElementById("logo").src = icon_path;
+});
+
 // Make external links clickable.
 const ext_links = document.querySelectorAll('a.ext-link')
 for(i=0;i<ext_links.length;i++)
